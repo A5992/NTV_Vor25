@@ -1,0 +1,125 @@
+
+
+/*  Global styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    
+}
+body {
+    background-color: #e0f7fa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/*  Main CV container */
+.cv-container {
+    background-color: white;
+    width: 800px;
+    padding-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/*  CV header section */
+.header {
+    background-color: #25b42a; 
+    text-align: center;
+    padding: 80px 20px 40px; 
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    position: relative;
+}
+
+
+.profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 20px auto;
+    margin-bottom: 10px;
+    border: 5px solid white;
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header h1 {
+    color: white;
+    margin: 20px 0;
+    margin-bottom: 10px;
+}
+
+.title {
+    color: white;
+    margin: 10px 0;
+    margin-bottom: 10px;
+}
+
+/*  Section Box Styling */
+.section-box {
+    width: 100%;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: white;
+}
+.header .section-box {
+    background-color: transparent;
+    width: 100%;
+}
+
+/*  CV Section Headers */
+h2 {
+    background-color: orangered;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-size: 20px ;
+}
+
+
+/*  Skills List */
+.skills ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.skills li {
+    padding: 5px 0;
+}
+
+/*  Work Experience */
+.job h3 {
+    color: #333;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.job p {
+    font-size: 16px;
+    color: #555;
+}
+
+/*  Footer */
+.footer {
+    background: #FFD700; 
+    text-align: center;
+    font-size: 16px;
+    font-style: italic;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+

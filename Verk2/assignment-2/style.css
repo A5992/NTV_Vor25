@@ -20,9 +20,8 @@ body {
 
 /*  Main CV container */
 .cv-container {
-    background-color: white;
+    background-color: #e0f7fa;
     width: 100%;
-    border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     overflow: hidden;
 }
@@ -53,7 +52,7 @@ body {
 }
 
 .header h1 {
-    color: white;
+    color: #e0f7fa;
     margin: 20px 0;
     margin-bottom: 10px;
 }

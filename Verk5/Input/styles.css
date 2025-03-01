@@ -90,3 +90,28 @@ textarea {
 .submit-btn:hover {
     background: #b71c1c;
 }
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    color: black;
+    padding: 20px;
+    border: 2px solid black;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.hidden-text {
+    visibility: hidden;
+    font-size: 14px;
+    color: gray;
+}
+
+/*.popup:hover .hidden-text {
+    visibility: visible;
+}*/

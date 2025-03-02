@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'inter', sans-serif;
 }
 
 body, html {
@@ -24,26 +24,55 @@ body, html {
     padding: 60px;
 }
 
+.header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.blue-line {
+    position: absolute;
+    left: 0;
+    transform: translateX(-120%);
+    width: calc(70px);
+    height: 1px;
+    background-color: #0099ff;
+}
+
 .highlight {
-    color: #007bff;
+    color: #0099ff;
     font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 36px;
     margin-bottom: 15px;
 }
 
-p {
+h3 {
     font-size: 16px;
-    margin-bottom: 15px;
+}
+
+p {
+    font-size: 14px;
+    margin-bottom: 20px;
     line-height: 1.5;
 }
 
 ul {
     list-style-type: none;
-    padding: 0;
+    padding: 20px 10px 30px 10px;
     margin-bottom: 15px;
+}
+
+ul li {
+    font-size: 14px;
+    margin-bottom: 12px;
 }
 
 ul li::before {
@@ -54,26 +83,26 @@ ul li::before {
 
 .buttons {
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
 
 button {
-    padding: 12px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    padding: 6px 20px 8px;
+    font-size: 14px;
+    border-radius: 20px; 
+    font-weight: bold;
 }
 
 .primary {
-    background-color: #007bff;
-    color: white;
+    background-color: white;
+    color: #0099ff;
+    border: 1px solid #0099ff;
 }
 
 .secondary {
-    background-color: white;
-    color: #007bff;
-    border: 1px solid #007bff;
+    background-color: #0099ff;
+    color: white;
+    border: 1px solid white;
 }
 
 .image-section {

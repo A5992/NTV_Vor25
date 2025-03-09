@@ -1,0 +1,144 @@
+:root {
+    --black: #000000;
+    --dgrey: #cdc2b1;
+    --lgrey: #e2ceae;
+    --red: #cc3e2c;
+    --yellow: #fab54c;
+    --blue: #213d58;
+
+
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    margin: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    gap: 10px;
+    width: 100vmin;
+    height: 100vmin;
+    background-color: black;
+}
+
+.grid-item {
+    background-color: white;
+}
+
+.one {
+    background-color: var(--dgrey);
+    grid-column: span 4;
+    grid-row: span 2;
+}
+
+.two {
+    background-color: var(--lgrey);
+    grid-column: span 6;
+    grid-row: span 2;
+}
+
+.three {
+    background-color: var(--yellow);
+    grid-column: span 5;
+    grid-row: span 2;
+}
+
+.four {
+    background-color: var(--dgrey);
+    grid-column: span 1;
+    grid-row: span 12;
+}
+
+.five {
+    background-color: var(--lgrey);
+    grid-column: span 2;
+    grid-row: span 4;
+}
+
+.six {
+    background-color: var(--red);
+    grid-column: span 8;
+    grid-row: span 8;
+}
+
+.seven {
+    background-color: var(--yellow);
+    grid-column: span 5;
+    grid-row: span 4;
+}
+
+.eight {
+    background-color: var(--dgrey);
+    grid-column: span 2;
+    grid-row: span 6;
+}
+
+.nine {
+    background-color: var(--lgrey);
+    grid-column: span 2;
+    grid-row: span 4;
+}
+
+.ten {
+    background-color: var(--lgrey);
+    grid-column: span 3;
+    grid-row: span 4;
+}
+
+.eleven {
+    background-color: var(--black);
+    grid-column: span 4;
+    grid-row: span 4;
+}
+
+.twelve {
+    background-color: var(--dgrey);
+    grid-column: span 4;
+    grid-row: span 2;
+}
+.thirteen {
+    background-color: var(--lgrey);
+    grid-column: span 5;
+    grid-row: span 2;
+}
+.fourteen {
+    background-color: var(--yellow);
+    grid-column: span 2;
+    grid-row: span 4;
+}
+.fifteen {
+    background-color: var(--dgrey);
+    grid-column: span 4;
+    grid-row: span 2;
+}
+.sixteen {
+    background-color: var(--blue);
+    grid-column: span 5;
+    grid-row: span 3;
+}
+.seventeen {
+    background-color: var(--red);
+    grid-column: span 1;
+    grid-row: span 4;
+}
+.eighteen {
+    background-color: var(--dgrey);
+    grid-column: span 4;
+    grid-row: span 2;
+}
+.nineteen {
+    background-color: var(--black);
+    grid-column: span 4;
+    grid-row: span 1;
+}
+.twenty {
+    background-color: var(--lgrey);
+    grid-column: span 9;
+    grid-row: span 1;
+}

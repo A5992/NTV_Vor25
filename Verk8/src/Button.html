@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Counter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        #counter {
+            font-size: 80px;
+            font-weight: bold;
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .button {
+            font-size: 50px;
+            font-weight: bold;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .increment {
+            background-color: green;
+        }
+        .decrement {
+            background-color: red;
+        }
+        #message {
+            display: none;
+            font-size: 60px;
+            font-weight: bold;
+            background-color: purple;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .boom {
+            display: block;
+        }
+        .settings {
+            margin-top: 20px;
+        }
+        input {
+            padding: 5px;
+            font-size: 16px;
+            width: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <p id="counter">0</p>
+        <div class="buttons">
+            <button class="button increment" id="increment">+</button>
+            <button class="button decrement" id="decrement">−</button>
+        </div>
+        <p id="message">!bOoMm!</p>
+
+        <div class="settings">
+            <label for="step">Step:</label>
+            <input type="number" id="step" value="5">
+            <label for="limit">Limit:</label>
+            <input type="number" id="limit" value="35">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

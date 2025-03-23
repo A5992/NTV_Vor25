@@ -1,94 +1,62 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector("form");
+  const nameField = form.querySelector("input[type='text']");
+  const emailField = form.querySelector("input[type='email']");
+  const departmentField = form.querySelector("select");
+  const messageField = form.querySelector("textarea");
+  const successMsg = document.getElementById("successMsg");
 
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
 
+    // Reset field borders
+    [nameField, emailField, departmentField, messageField].forEach((field) => {
+      field.classList.remove("border-red-500");
+    });
 
+    let hasError = false;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//Fyrir button.html verkefnið
-/*document.addEventListener("DOMContentLoaded", function () {
-    const counterElement = document.getElementById("counter");
-    const messageElement = document.getElementById("message");
-    const incrementButton = document.getElementById("increment");
-    const decrementButton = document.getElementById("decrement");
-    const stepInput = document.getElementById("step");
-    const limitInput = document.getElementById("limit");
-
-    let step = localStorage.getItem("step") ? parseInt(localStorage.getItem("step")) : 5;
-    let limit = localStorage.getItem("limit") ? parseInt(localStorage.getItem("limit")) : 35;
-    let counter = 0;
-
-    // Update input fields with stored values
-    stepInput.value = step;
-    limitInput.value = limit;
-
-    function toAlternatingCase(text) {
-        return text
-            .split("")
-            .map((char, index) => (index % 2 === 0 ? char.toLowerCase() : char.toUpperCase()))
-            .join("");
+    // Name validation
+    if (nameField.value.trim() === "") {
+      nameField.classList.add("border-red-500");
+      hasError = true;
     }
 
-    function updateCounter(value) {
-        counter = value;
-        counterElement.textContent = counter;
-
-        if (counter > limit || counter < -limit) {
-            messageElement.style.display = "block"; // Show "BOOM"
-        } else {
-            messageElement.style.display = "none"; // Hide "BOOM" if within limits
-        }
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(emailField.value.trim())) {
+      emailField.classList.add("border-red-500");
+      hasError = true;
     }
 
-    incrementButton.addEventListener("click", function () {
-        updateCounter(counter + step);
-    });
+    // Department selection
+    if (departmentField.value === "") {
+      departmentField.classList.add("border-red-500");
+      hasError = true;
+    }
 
-    decrementButton.addEventListener("click", function () {
-        updateCounter(counter - step);
-    });
+    // Message
+    if (messageField.value.trim() === "") {
+      messageField.classList.add("border-red-500");
+      hasError = true;
+    }
 
-    // Live update step and limit when user changes inputs
-    stepInput.addEventListener("input", function () {
-        step = parseInt(stepInput.value) || 5;
-        localStorage.setItem("step", step);
-    });
+    // Show success if no errors
+    if (!hasError) {
+      form.reset();
 
-    limitInput.addEventListener("input", function () {
-        limit = parseInt(limitInput.value) || 35;
-        localStorage.setItem("limit", limit);
+      // Show and animate success message
+      successMsg.classList.remove("hidden", "opacity-0");
+      successMsg.classList.add("opacity-100");
 
-        // Immediately check if we should display BOOM
-        updateCounter(counter);
-    });
-
-    updateCounter(0);
-});*/
+      // Hide it after 4s
+      setTimeout(() => {
+        successMsg.classList.remove("opacity-100");
+        successMsg.classList.add("opacity-0");
+        setTimeout(() => {
+          successMsg.classList.add("hidden");
+        }, 300); // After fade-out
+      }, 4000);
+    }
+  });
+});

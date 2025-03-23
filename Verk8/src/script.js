@@ -1,4 +1,40 @@
-document.addEventListener("DOMContentLoaded", function () {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Fyrir button.html verkefnið
+/*document.addEventListener("DOMContentLoaded", function () {
     const counterElement = document.getElementById("counter");
     const messageElement = document.getElementById("message");
     const incrementButton = document.getElementById("increment");
@@ -55,4 +91,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     updateCounter(0);
-});
+});*/

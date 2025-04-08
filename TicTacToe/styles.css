@@ -1,0 +1,92 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #c9d6ff, #e2e2e2);
+  margin: 0;
+  padding: 20px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  background-color: #ffffff;
+  border: 2px solid #333;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.1s ease, background-color 0.3s;
+}
+
+.cell:hover {
+  background-color: #f8f8f8;
+  transform: scale(1.03);
+}
+
+.cell.taken {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.status {
+  margin-top: 20px;
+  font-size: 1.7rem;
+  font-weight: 600;
+  text-shadow: 1px 1px #fff;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #222;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.scoreboard {
+  margin-top: 25px;
+  display: flex;
+  gap: 40px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333;
+  text-shadow: 1px 1px #fff;
+}
+
+.scoreboard span {
+  font-size: 2rem;
+  color: #000;
+}
+
+.controls {
+  margin-top: 15px;
+  display: flex;
+  gap: 12px;
+}

@@ -1,7 +1,7 @@
 body {
   margin: 0;
   background-color: #a0e7a0;
-  font-family: 'Comic Sans MS', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,4 +91,12 @@ input.focused {
 .donkey.hovering {
   transform: scale(1.1) rotate(365deg);
   box-shadow: 0 0 20px #000;
+}
+.swamp p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.swamp strong {
+  color: #1b5e20;
 }

@@ -71,6 +71,7 @@ export default function App() {
   value={secondaryInput}
   className={focused ? "focused" : ""}
 />
+<p>You typed: <strong>{secondaryInput}</strong></p>
 
       <p>
         Last key pressed: <strong>{lastKey}</strong>

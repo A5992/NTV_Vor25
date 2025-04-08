@@ -24,6 +24,8 @@ function handleClick(index) {
     gameBoard[index] = currentPlayer;
     cells[index].textContent = currentPlayer;
     cells[index].classList.add('taken');
+    cells[index].classList.add('opacity-50', 'cursor-not-allowed');
+
 
     const winner = checkWinner();
     if (winner) {
@@ -90,13 +92,14 @@ function toggleStarter() {
 
 function createBoard() {
     for (let index = 0; index < 9; index++) {
-        const cell = document.createElement('div');
-        cell.classList.add('cell');
-        cell.id = `cell-${index}`;
-        cell.addEventListener('click', () => handleClick(index));
-        board.appendChild(cell);
-        cells.push(cell);
+      const cell = document.createElement('div');
+      cell.className = "w-24 h-24 flex items-center justify-center text-4xl font-bold bg-white border-2 border-gray-800 cursor-pointer shadow hover:bg-gray-100 transition-transform duration-150 active:scale-95";
+      cell.id = `cell-${index}`;
+      cell.addEventListener('click', () => handleClick(index));
+      board.appendChild(cell);
+      cells.push(cell);
     }
-}
+  }
+  
 
 createBoard();
